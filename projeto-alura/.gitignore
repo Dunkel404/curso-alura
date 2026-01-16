@@ -1,3 +1,5 @@
 .*
 !.gitignore
-node_moules/
+node_modules/
+projeto-alura/node_modules/
+projeto-alura/.*

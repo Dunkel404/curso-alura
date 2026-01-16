@@ -15,9 +15,9 @@ import logger from '@/logger'
 //   }
 // }
 
-async function getAllPosts() {
+async function getAllPosts(page) {
   try {
-    const response = await fetch('http://localhost:3042/posts');
+    const response = await fetch(`http://localhost:3042/posts?_page=${page}&_per_page=25`);
     if (!response || !response.ok) throw new Error('Falha na rede')
     logger.info('Posts obtidos com sucesso');
     return response.json();
@@ -30,11 +30,11 @@ async function getAllPosts() {
 }
 
 export default async function Home() {
-  const posts = await getAllPosts();
+  const { data: posts} = await getAllPosts(1);
 
   return (
     <main>
-      {posts.map(post => <CardPost post={post} />)}
+      {posts.map(post => <CardPost key={post.id} post={post} />)}
       
     </main>
   );

@@ -1,5 +1,6 @@
 import { CardPost } from "@/components/CardPost";
-import logger from '@/logger'
+import logger from '@/logger';
+import Styles from './page.module.css';
 // const post = {
 //   "id": 1,
 //   "cover": "https://raw.githubusercontent.com/viniciosneves/code-connect-assets/main/posts/introducao-ao-react.png",
@@ -17,7 +18,7 @@ import logger from '@/logger'
 
 async function getAllPosts(page) {
   try {
-    const response = await fetch(`http://localhost:3042/posts?_page=${page}&_per_page=25`);
+    const response = await fetch(`http://localhost:3042/posts?_page=${page}&_per_page=6`);
     if (!response || !response.ok) throw new Error('Falha na rede')
     logger.info('Posts obtidos com sucesso');
     return response.json();
@@ -33,7 +34,7 @@ export default async function Home() {
   const { data: posts} = await getAllPosts(1);
 
   return (
-    <main>
+    <main className={Styles.PostsGrid}>
       {posts.map(post => <CardPost key={post.id} post={post} />)}
       
     </main>

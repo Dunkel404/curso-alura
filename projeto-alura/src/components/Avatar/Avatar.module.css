@@ -1,3 +1,7 @@
 .AvatarContainer {
-    display: flex
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap:5px;
+    margin: 10px;
 }

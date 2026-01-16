@@ -1,11 +1,13 @@
 .cardContainer {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+
     overflow: hidden;
     color:rgb(187, 187, 187);
     background-color: #171D1F;
     width: 486px;
-    height: 250px;
+    height: 431px;
     border-radius: 15px;
 
     .cardHeader {
@@ -18,12 +20,14 @@
     }
 
     .cardBody {
+        flex:1;
+        padding: 10px;
         .title {
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
 
         .text {
-            font-size: 0.8rem;
+            font-size: 1rem;
         }
     }
     .cardFooter {

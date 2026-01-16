@@ -1,0 +1,4 @@
+.*
+!.gitignore
+node_moules/*
+node_moules/

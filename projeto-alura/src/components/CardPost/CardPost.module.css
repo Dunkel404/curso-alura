@@ -1,0 +1,33 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color:rgb(187, 187, 187);
+    background-color: #171D1F;
+    width: 486px;
+    height: 250px;
+    border-radius: 15px;
+
+    .cardHeader {
+
+        .cardFigure {
+            .cover {
+
+            }
+        }
+    }
+
+    .cardBody {
+        .title {
+            font-size: 1rem;
+        }
+
+        .text {
+            font-size: 0.8rem;
+        }
+    }
+    .cardFooter {
+        display:flex;
+        flex-direction: row-reverse;
+    }
+}

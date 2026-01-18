@@ -1,6 +1,8 @@
 import { CardPost } from "@/components/CardPost";
 import logger from '@/logger';
 import Styles from './page.module.css';
+import Link from "next/link";
+import { PaginationControls } from "@/components/PaginationControls";
 // const post = {
 //   "id": 1,
 //   "cover": "https://raw.githubusercontent.com/viniciosneves/code-connect-assets/main/posts/introducao-ao-react.png",
@@ -30,13 +32,16 @@ async function getAllPosts(page) {
   }
 }
 
-export default async function Home() {
-  const { data: posts} = await getAllPosts(1);
+export default async function Home({ searchParams }) {
+  const page = searchParams?.page || 1
+  const { data: posts ,prev, next} = await getAllPosts(page);
 
   return (
-    <main className={Styles.PostsGrid}>
-      {posts.map(post => <CardPost key={post.id} post={post} />)}
-      
+    <main>
+      <div className={Styles.PostsGrid}>
+        {posts.map(post => <CardPost key={post.id} post={post} />)}
+      </div>
+      <PaginationControls next={next} prev={prev} />
     </main>
   );
 }

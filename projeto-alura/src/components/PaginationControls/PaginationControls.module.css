@@ -1,0 +1,15 @@
+.PaginationControls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    .PrevLink, .NextLink, .CurrentPage{
+        text-decoration: none;
+        color: #7ddd74;
+    }
+
+    .CurrentPage {
+        text-decoration: underline #7ddd74;
+        /* border: 1px dashed #7ddd74; */
+    }
+}

@@ -1,37 +1,39 @@
-.cardContainer {
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  .cardContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 
     overflow: hidden;
-    color:rgb(187, 187, 187);
-    background-color: #171D1F;
+    color: rgb(187, 187, 187);
+    background-color: #171d1f;
     width: 486px;
     height: 431px;
     border-radius: 15px;
 
     .cardHeader {
-
-        .cardFigure {
-            .cover {
-
-            }
+      .cardFigure {
+        .cover {
         }
+      }
     }
 
     .cardBody {
-        flex:1;
-        padding: 10px;
-        .title {
-            font-size: 1.2rem;
-        }
+      flex: 1;
+      padding: 10px;
+      .title {
+        font-size: 1.2rem;
+      }
 
-        .text {
-            font-size: 1rem;
-        }
+      .text {
+        font-size: 1rem;
+      }
     }
     .cardFooter {
-        display:flex;
-        flex-direction: row-reverse;
+      display: flex;
+      flex-direction: row-reverse;
     }
+  }
 }

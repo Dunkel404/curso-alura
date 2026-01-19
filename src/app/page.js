@@ -39,7 +39,7 @@ export default async function Home({ searchParams }) {
   return (
     <main>
       <div className={Styles.PostsGrid}>
-        {posts.map(post => <CardPost key={post.id} post={post} />)}
+        {posts.map(post =>  <CardPost key={post.id} post={post} />)}
       </div>
       <PaginationControls next={next} prev={prev} />
     </main>
